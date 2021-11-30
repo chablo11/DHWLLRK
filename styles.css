@@ -1,0 +1,19 @@
+.yes {
+	color: green;
+	font-size: 1000%;
+	text-align: center;
+}
+
+.therealtruth {
+	font-size: 50%;
+	color: white;
+}
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: right;
+	color: white;
+}
