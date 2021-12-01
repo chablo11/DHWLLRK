@@ -9,6 +9,10 @@
 	color: white;
 }
 
+.opinion {
+	text-align: center;
+}
+
 footer {
 	position: fixed;
 	left: 0;
