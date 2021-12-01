@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" href="styles.css">
-    <title>DoesHarveyWeinsteinLookLikeRyanKavanaugh?</title>
-</head>
+	<head>
+		<link rel="stylesheet" href="styles.css">
+		<meta charset="UTF-8">
+		<title>DoesHarveyWeinsteinLookLikeRyanKavanaugh?</title>
+	</head>
+	<script>
+		var colors = ["black", "white"];
+		var colorIndex = 0;
+		function changeColor() {
+			var col = document.getElementById("background");
+			if( colorIndex >= colors.length ) {
+				colorIndex = 0;
+			}
+			col.style.backgroundColor = colors[colorIndex];
+			colorIndex++;
+		}
+	</script>
 
-<body>
-    <div class="yes">YES.</div>
+	<body id='background'>
+		<button onclick="changeColor();">Dark Mode</button>
+		<div class="yes">YES.</div>
 	
-	<footer>
-		<div>Created by Ryan Kavanaugh's Mom.</div>
-		<div class="therealtruth">In Minecraft.</div>
-	</footer>
-</body>
-
+		<footer>
+			<div>Created by Ryan Kavanaugh's Mom.</div>
+			<div class="therealtruth">In Minecraft.</div>
+		</footer>
+	</body>
 </html>
