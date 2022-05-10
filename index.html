@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Check out Kav and Hav's very first appearance in this flappy bird-esque type game.">
+	<meta name="keywords" content="does harvey weinstein look like ryan kavanaugh?, does ryan kavanaugh look like harvey weinstein?, Ryan Kavanaugh, Harvey Weinstein, DHWLLRK">
+	<meta name="author" content="Fair Use">
+    <link rel="stylesheet" href="Game2/assets/css/reset.css">
+    <link rel="stylesheet" href="Game2/assets/css/style.css">
+	<meta name="robots" content="index">
+    <title>Flappy Hav and Kav</title>
+  </head>
+  <body>
+    <div class="webgl-wrapper">
+      <div class="aspect"></div>
+      <div class="webgl-content">
+        <div id="unityContainer">
+          <canvas id="unity-canvas" style="background: #231F20"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="info">
+      <p>Flappy Hav and Kav is brought to you by _____</p>
+      <p>All characters appearing in this game are fictitious. Any resemblance to real persons, living or dead, is purely coincidental.</p>
+      <p>press F or <a href="#" onclick="myGameInstance.SetFullscreen(1)">click here</a> to toggle fullscreen</p>
+    </div>
+
+    <script src="Game2/MyLoader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Game2/Build/Build.data",
+        frameworkUrl: "Game2/Build/Build.framework.js",
+        codeUrl: "Game2/Build/Build.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "ChabloInc",
+        productName: "Flappy Kav and Hav",
+        productVersion: "1.0",
+      }).then((unityInstance) => {
+        myGameInstance = unityInstance;
+      });
+    </script>
+
+    <!-- check for F key press to toggle full screen -->
+    <script>
+      var isFullscreen = false;
+
+      document.addEventListener('keydown', function(event) {
+          if (event.which === 70) {
+              if (!isFullscreen) {
+                myGameInstance.SetFullscreen(1);
+              } else {
+                myGameInstance.SetFullscreen(0);
+              }
+              isFullscreen = !isFullscreen;
+          }
+      });
+    </script>
+  </body>
+</html>
